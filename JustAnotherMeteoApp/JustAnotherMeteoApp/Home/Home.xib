@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="JustAnotherMeteoApp" customModuleProvider="target">
             <connections>
+                <outlet property="containerView" destination="Elq-mu-lKl" id="996-Qh-kYR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,9 +19,8 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-LP-9dF">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-LP-9dF">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <items>
                         <navigationItem id="aiS-az-YVY">
                             <barButtonItem key="rightBarButtonItem" systemItem="search" id="MZE-nL-SI8">
@@ -29,9 +31,28 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-mu-lKl">
+                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="JzQ-gq-ci7"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Elq-mu-lKl" secondAttribute="bottom" constant="34" id="KGW-Xc-fT7"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="top" secondItem="FH4-LP-9dF" secondAttribute="bottom" id="PCU-yE-edx"/>
+                <constraint firstItem="FH4-LP-9dF" firstAttribute="top" secondItem="JzQ-gq-ci7" secondAttribute="top" id="Uae-DN-IfO"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cPp-Ur-oAR"/>
+                <constraint firstAttribute="trailing" secondItem="FH4-LP-9dF" secondAttribute="trailing" id="hi6-bE-xkH"/>
+                <constraint firstItem="FH4-LP-9dF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s3o-69-Vrb"/>
+                <constraint firstAttribute="trailing" secondItem="Elq-mu-lKl" secondAttribute="trailing" id="uOR-iF-UhM"/>
+            </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

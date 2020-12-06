@@ -12,7 +12,8 @@ class HomeViewController: UIViewController {
     
     // MARK: - Outlets
     // Place here possible IBOutlets
-
+    @IBOutlet private weak var containerView: UIView!
+    
     var eventHandler: HomeEventHandler?
     var dataProvider: HomeDataProvider?
 
