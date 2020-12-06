@@ -15,6 +15,14 @@
 		47294E8A25783BA20003DE5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47294E8825783BA20003DE5F /* LaunchScreen.storyboard */; };
 		47294E9525783BA20003DE5F /* JustAnotherMeteoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294E9425783BA20003DE5F /* JustAnotherMeteoAppTests.swift */; };
 		47294EA025783BA20003DE5F /* JustAnotherMeteoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294E9F25783BA20003DE5F /* JustAnotherMeteoAppUITests.swift */; };
+		474AC397257D49CF000C6CD7 /* HomeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC38F257D49CF000C6CD7 /* HomeNetworkManager.swift */; };
+		474AC398257D49CF000C6CD7 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC390257D49CF000C6CD7 /* HomePresenter.swift */; };
+		474AC399257D49CF000C6CD7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC391257D49CF000C6CD7 /* HomeViewController.swift */; };
+		474AC39A257D49CF000C6CD7 /* HomeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC392257D49CF000C6CD7 /* HomeProtocols.swift */; };
+		474AC39B257D49CF000C6CD7 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC393257D49CF000C6CD7 /* HomeInteractor.swift */; };
+		474AC39C257D49CF000C6CD7 /* HomeEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC394257D49CF000C6CD7 /* HomeEntities.swift */; };
+		474AC39D257D49CF000C6CD7 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474AC395257D49CF000C6CD7 /* Home.xib */; };
+		474AC39E257D49CF000C6CD7 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC396257D49CF000C6CD7 /* HomeWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		47294E9B25783BA20003DE5F /* JustAnotherMeteoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustAnotherMeteoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		47294E9F25783BA20003DE5F /* JustAnotherMeteoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustAnotherMeteoAppUITests.swift; sourceTree = "<group>"; };
 		47294EA125783BA20003DE5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		474AC38F257D49CF000C6CD7 /* HomeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetworkManager.swift; sourceTree = "<group>"; };
+		474AC390257D49CF000C6CD7 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		474AC391257D49CF000C6CD7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		474AC392257D49CF000C6CD7 /* HomeProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProtocols.swift; sourceTree = "<group>"; };
+		474AC393257D49CF000C6CD7 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		474AC394257D49CF000C6CD7 /* HomeEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntities.swift; sourceTree = "<group>"; };
+		474AC395257D49CF000C6CD7 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
+		474AC396257D49CF000C6CD7 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,7 @@
 		47294E7C25783B9F0003DE5F /* JustAnotherMeteoApp */ = {
 			isa = PBXGroup;
 			children = (
+				474AC3A2257D49D4000C6CD7 /* Home */,
 				47294E7D25783B9F0003DE5F /* AppDelegate.swift */,
 				47294E7F25783B9F0003DE5F /* SceneDelegate.swift */,
 				47294E8125783B9F0003DE5F /* ViewController.swift */,
@@ -126,6 +143,21 @@
 				47294EA125783BA20003DE5F /* Info.plist */,
 			);
 			path = JustAnotherMeteoAppUITests;
+			sourceTree = "<group>";
+		};
+		474AC3A2257D49D4000C6CD7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				474AC38F257D49CF000C6CD7 /* HomeNetworkManager.swift */,
+				474AC390257D49CF000C6CD7 /* HomePresenter.swift */,
+				474AC391257D49CF000C6CD7 /* HomeViewController.swift */,
+				474AC392257D49CF000C6CD7 /* HomeProtocols.swift */,
+				474AC393257D49CF000C6CD7 /* HomeInteractor.swift */,
+				474AC394257D49CF000C6CD7 /* HomeEntities.swift */,
+				474AC395257D49CF000C6CD7 /* Home.xib */,
+				474AC396257D49CF000C6CD7 /* HomeWireframe.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +224,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "matteogazzato@gmail.com";
 				TargetAttributes = {
 					47294E7925783B9F0003DE5F = {
 						CreatedOnToolsVersion = 12.0;
@@ -233,6 +266,7 @@
 			files = (
 				47294E8A25783BA20003DE5F /* LaunchScreen.storyboard in Resources */,
 				47294E8725783BA20003DE5F /* Assets.xcassets in Resources */,
+				474AC39D257D49CF000C6CD7 /* Home.xib in Resources */,
 				47294E8525783B9F0003DE5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				47294E8225783B9F0003DE5F /* ViewController.swift in Sources */,
+				474AC397257D49CF000C6CD7 /* HomeNetworkManager.swift in Sources */,
 				47294E7E25783B9F0003DE5F /* AppDelegate.swift in Sources */,
+				474AC39E257D49CF000C6CD7 /* HomeWireframe.swift in Sources */,
+				474AC39B257D49CF000C6CD7 /* HomeInteractor.swift in Sources */,
+				474AC398257D49CF000C6CD7 /* HomePresenter.swift in Sources */,
+				474AC39A257D49CF000C6CD7 /* HomeProtocols.swift in Sources */,
+				474AC39C257D49CF000C6CD7 /* HomeEntities.swift in Sources */,
 				47294E8025783B9F0003DE5F /* SceneDelegate.swift in Sources */,
+				474AC399257D49CF000C6CD7 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
