@@ -25,6 +25,7 @@ class ForecastsPresenter: ForecastsDataProvider {
     // MARK: - ForecastsDataProvider
     // All data provider properties defined
     var forecasts: [Forecast] = []
+    var mainForecast: Forecast!
     
     // MARK: - Internal Utils
     // All internal methods not defined in any protocol

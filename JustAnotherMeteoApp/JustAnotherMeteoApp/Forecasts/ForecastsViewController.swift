@@ -61,7 +61,7 @@ extension ForecastsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider?.forecasts.count ?? 0 - 1
+        return dataProvider?.forecasts.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -76,10 +76,10 @@ extension ForecastsViewController: UITableViewDelegate, UITableViewDataSource {
         switch section {
         case 0:
             guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ForecastTVHeaderFooterView.identifier) as? ForecastTVHeaderFooterView,
-                  let firstItem = dataProvider?.forecasts.first else {
+                  let mainItem = dataProvider?.mainForecast else {
                 return nil
             }
-            let forecastCellItem = ForecastCellItem(withForecast: firstItem)
+            let forecastCellItem = ForecastCellItem(withForecast: mainItem)
             header.update(withItem: forecastCellItem)
             return header
         default:

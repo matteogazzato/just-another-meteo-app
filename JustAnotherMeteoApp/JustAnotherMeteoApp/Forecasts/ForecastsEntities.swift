@@ -15,8 +15,10 @@ struct ForecastCellItem {
     
     init(withForecast forecast: Forecast) {
         iconUrl =  NetworkConstants.iconURL(withCodeName: forecast.weather?.icon ?? "")
-        secondaryLabelText = forecast.weather?.description ?? "-"
-        mainLabelText = forecast.weather?.main ?? "-"
+        mainLabelText = Helpers.convert(dateString: forecast.date,
+                                        withFormat: "yyyy-MM-dd HH:mm:ss",
+                                        toFormat: "dd, EEEE") ?? ""
+        secondaryLabelText = "\(forecast.temperature)"
     }
 }
 

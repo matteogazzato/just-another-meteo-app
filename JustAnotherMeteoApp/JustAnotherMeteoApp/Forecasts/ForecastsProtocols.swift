@@ -29,6 +29,7 @@ protocol ForecastsEventHandler: AnyObject {
 
 protocol ForecastsDataProvider: AnyObject {
     // Add ForecastsDataProvider definition
+    var mainForecast: Forecast! { get set }
     var forecasts: [Forecast] { get set }
 }
 

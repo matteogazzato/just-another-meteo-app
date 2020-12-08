@@ -54,8 +54,9 @@ extension HomePresenter: HomeInteractorOutput {
     func onForecastsReceived(_ forecasts: [Forecast]) {
         guard let vc = view as? HomeViewController,
               let forecastsVc = vc.getChildViewController(ForecastsViewController.typeName) as? ForecastsViewController else { return }
-        
-        forecastsVc.dataProvider?.forecasts = forecasts
+        var weatherForecasts = forecasts
+        forecastsVc.dataProvider?.mainForecast = weatherForecasts.removeFirst()
+        forecastsVc.dataProvider?.forecasts = weatherForecasts
         forecastsVc.updateUI()
     }
     

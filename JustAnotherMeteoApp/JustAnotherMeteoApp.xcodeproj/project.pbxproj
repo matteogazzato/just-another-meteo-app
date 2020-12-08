@@ -34,6 +34,7 @@
 		474AC39C257D49CF000C6CD7 /* HomeEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC394257D49CF000C6CD7 /* HomeEntities.swift */; };
 		474AC39D257D49CF000C6CD7 /* Home.xib in Resources */ = {isa = PBXBuildFile; fileRef = 474AC395257D49CF000C6CD7 /* Home.xib */; };
 		474AC39E257D49CF000C6CD7 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474AC396257D49CF000C6CD7 /* HomeWireframe.swift */; };
+		478060362580220600D74465 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478060352580220600D74465 /* Helpers.swift */; };
 		478F97D2257FD51E00CD1DBA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97D1257FD51E00CD1DBA /* UIViewExtensions.swift */; };
 		478F97D7257FD8CE00CD1DBA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97D6257FD8CE00CD1DBA /* UIViewControllerExtensions.swift */; };
 		478F97DC257FDD9D00CD1DBA /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97DB257FDD9D00CD1DBA /* UITableViewCellExtensions.swift */; };
@@ -106,6 +107,7 @@
 		474AC394257D49CF000C6CD7 /* HomeEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntities.swift; sourceTree = "<group>"; };
 		474AC395257D49CF000C6CD7 /* Home.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Home.xib; sourceTree = "<group>"; };
 		474AC396257D49CF000C6CD7 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWireframe.swift; sourceTree = "<group>"; };
+		478060352580220600D74465 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		478F97D1257FD51E00CD1DBA /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		478F97D6257FD8CE00CD1DBA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		478F97DB257FDD9D00CD1DBA /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
@@ -198,9 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				47260584257ED07000B4C874 /* ForecastsResponse.swift */,
-				47260589257ED0D700B4C874 /* City.swift */,
-				4726058E257ED1F400B4C874 /* Forecast.swift */,
-				4726059B257F833100B4C874 /* Weather.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -230,10 +229,11 @@
 		47294E7C25783B9F0003DE5F /* JustAnotherMeteoApp */ = {
 			isa = PBXGroup;
 			children = (
-				478F97D0257FD50700CD1DBA /* Extensions */,
-				47A23BC4257F9B7100A2B682 /* Forecasts */,
-				47260564257D5A8C00B4C874 /* Network */,
 				474AC3A2257D49D4000C6CD7 /* Home */,
+				47A23BC4257F9B7100A2B682 /* Forecasts */,
+				478F97F325800B3200CD1DBA /* Entities */,
+				478F97D0257FD50700CD1DBA /* Extensions */,
+				47260564257D5A8C00B4C874 /* Network */,
 				47294E7D25783B9F0003DE5F /* AppDelegate.swift */,
 				47294E7F25783B9F0003DE5F /* SceneDelegate.swift */,
 				47294E8125783B9F0003DE5F /* ViewController.swift */,
@@ -241,6 +241,7 @@
 				47294E8625783BA20003DE5F /* Assets.xcassets */,
 				47294E8825783BA20003DE5F /* LaunchScreen.storyboard */,
 				47294E8B25783BA20003DE5F /* Info.plist */,
+				478060352580220600D74465 /* Helpers.swift */,
 			);
 			path = JustAnotherMeteoApp;
 			sourceTree = "<group>";
@@ -287,6 +288,16 @@
 				478F97DB257FDD9D00CD1DBA /* UITableViewCellExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		478F97F325800B3200CD1DBA /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				47260589257ED0D700B4C874 /* City.swift */,
+				4726058E257ED1F400B4C874 /* Forecast.swift */,
+				4726059B257F833100B4C874 /* Weather.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		47A23BC4257F9B7100A2B682 /* Forecasts */ = {
@@ -597,6 +608,7 @@
 				4726059C257F833100B4C874 /* Weather.swift in Sources */,
 				474AC39C257D49CF000C6CD7 /* HomeEntities.swift in Sources */,
 				47A23BF0257FCB4200A2B682 /* ForecastTableViewCell.swift in Sources */,
+				478060362580220600D74465 /* Helpers.swift in Sources */,
 				478F97EA257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift in Sources */,
 				47294E8025783B9F0003DE5F /* SceneDelegate.swift in Sources */,
 				474AC399257D49CF000C6CD7 /* HomeViewController.swift in Sources */,
