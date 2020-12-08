@@ -37,6 +37,8 @@
 		478F97D2257FD51E00CD1DBA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97D1257FD51E00CD1DBA /* UIViewExtensions.swift */; };
 		478F97D7257FD8CE00CD1DBA /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97D6257FD8CE00CD1DBA /* UIViewControllerExtensions.swift */; };
 		478F97DC257FDD9D00CD1DBA /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97DB257FDD9D00CD1DBA /* UITableViewCellExtensions.swift */; };
+		478F97EA257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 478F97E9257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift */; };
+		478F97EF257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 478F97EE257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib */; };
 		47A23BE3257F9D5E00A2B682 /* Forecasts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47A23BDB257F9D5E00A2B682 /* Forecasts.storyboard */; };
 		47A23BE4257F9D5E00A2B682 /* ForecastsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A23BDC257F9D5E00A2B682 /* ForecastsNetworkManager.swift */; };
 		47A23BE5257F9D5E00A2B682 /* ForecastsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A23BDD257F9D5E00A2B682 /* ForecastsPresenter.swift */; };
@@ -107,6 +109,8 @@
 		478F97D1257FD51E00CD1DBA /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		478F97D6257FD8CE00CD1DBA /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		478F97DB257FDD9D00CD1DBA /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		478F97E9257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastTVHeaderFooterView.swift; sourceTree = "<group>"; };
+		478F97EE257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForecastTVHeaderFooterView.xib; sourceTree = "<group>"; };
 		47A23BDB257F9D5E00A2B682 /* Forecasts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Forecasts.storyboard; sourceTree = "<group>"; };
 		47A23BDC257F9D5E00A2B682 /* ForecastsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsNetworkManager.swift; sourceTree = "<group>"; };
 		47A23BDD257F9D5E00A2B682 /* ForecastsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsPresenter.swift; sourceTree = "<group>"; };
@@ -305,6 +309,8 @@
 			isa = PBXGroup;
 			children = (
 				47A23BEF257FCB4200A2B682 /* ForecastTableViewCell.swift */,
+				478F97E9257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift */,
+				478F97EE257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -434,6 +440,7 @@
 				47294E8A25783BA20003DE5F /* LaunchScreen.storyboard in Resources */,
 				47294E8725783BA20003DE5F /* Assets.xcassets in Resources */,
 				474AC39D257D49CF000C6CD7 /* Home.xib in Resources */,
+				478F97EF257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib in Resources */,
 				47294E8525783B9F0003DE5F /* Main.storyboard in Resources */,
 				47A23BE3257F9D5E00A2B682 /* Forecasts.storyboard in Resources */,
 			);
@@ -590,6 +597,7 @@
 				4726059C257F833100B4C874 /* Weather.swift in Sources */,
 				474AC39C257D49CF000C6CD7 /* HomeEntities.swift in Sources */,
 				47A23BF0257FCB4200A2B682 /* ForecastTableViewCell.swift in Sources */,
+				478F97EA257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift in Sources */,
 				47294E8025783B9F0003DE5F /* SceneDelegate.swift in Sources */,
 				474AC399257D49CF000C6CD7 /* HomeViewController.swift in Sources */,
 				478F97DC257FDD9D00CD1DBA /* UITableViewCellExtensions.swift in Sources */,

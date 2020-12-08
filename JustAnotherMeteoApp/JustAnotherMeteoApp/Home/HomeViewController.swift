@@ -43,13 +43,15 @@ class HomeViewController: UIViewController {
 extension HomeViewController: HomeViewProtocol {
     func updateUI() {
         // update UI elements here
+        containerView.clipsToBounds = true
     }
     
     func add(childViewController vc: UIViewController) {
         addChild(vc)
-        vc.didMove(toParent: self)
+        vc.view.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        vc.view.frame = containerView.bounds
         containerView.addSubview(vc.view)
-        vc.view.fillSuperview()
+        vc.didMove(toParent: self)
     }
 }
 

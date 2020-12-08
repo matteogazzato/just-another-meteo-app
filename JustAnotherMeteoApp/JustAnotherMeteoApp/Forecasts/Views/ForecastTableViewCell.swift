@@ -11,12 +11,13 @@ import Kingfisher
 
 class ForecastTableViewCell: UITableViewCell {
     
-    static let height: CGFloat = 100.0
+    static let height: CGFloat = 150.0
     
     // MARK: - Outlets
     @IBOutlet private weak var mainLabel: UILabel!
     @IBOutlet private weak var secondaryLabel: UILabel!
     @IBOutlet private weak var iconImageView: UIImageView!
+    @IBOutlet private weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,7 +26,9 @@ class ForecastTableViewCell: UITableViewCell {
 
     // MARK: - Internal Utils
     private func setupUI() {
-
+        containerView.layer.borderWidth = 0.5
+        containerView.layer.borderColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
+        containerView.layer.cornerRadius = 5.0
     }
 }
 

@@ -37,12 +37,12 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="HnP-NK-QnD" firstAttribute="leading" secondItem="JzQ-gq-ci7" secondAttribute="leading" id="1jh-fu-bSB"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="leading" secondItem="JzQ-gq-ci7" secondAttribute="leading" id="5gE-n6-RmL"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="bottom" secondItem="JzQ-gq-ci7" secondAttribute="bottom" id="8ig-mJ-hZX"/>
                 <constraint firstItem="JzQ-gq-ci7" firstAttribute="top" secondItem="HnP-NK-QnD" secondAttribute="top" id="91D-Ic-70i"/>
-                <constraint firstAttribute="bottom" secondItem="Elq-mu-lKl" secondAttribute="bottom" constant="34" id="KGW-Xc-fT7"/>
-                <constraint firstItem="Elq-mu-lKl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cPp-Ur-oAR"/>
-                <constraint firstItem="Elq-mu-lKl" firstAttribute="top" secondItem="HnP-NK-QnD" secondAttribute="bottom" id="fms-XP-bhB"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="top" secondItem="HnP-NK-QnD" secondAttribute="bottom" id="Ovg-Jb-jdb"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="trailing" secondItem="JzQ-gq-ci7" secondAttribute="trailing" id="mpT-VW-lT5"/>
                 <constraint firstItem="HnP-NK-QnD" firstAttribute="trailing" secondItem="JzQ-gq-ci7" secondAttribute="trailing" id="nCE-Fm-tOa"/>
-                <constraint firstAttribute="trailing" secondItem="Elq-mu-lKl" secondAttribute="trailing" id="uOR-iF-UhM"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>
