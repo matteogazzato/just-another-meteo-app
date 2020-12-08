@@ -9,17 +9,13 @@
 struct Forecast: Codable {
     let temperature: Float
     let humidity: Int
-    let weatherMain: String
-    let weatherDescription: String
-    let weatherIcon: String
+    let weather: Weather?
     
     enum CodingKeys: String, CodingKey {
         case main = "main"
         case temperature = "temp"
         case humidity = "humidity"
         case weather = "weather"
-        case weatherIcon = "icon"
-        case weatherDescription = "description"
     }
     
     // MARK: - Decoding
@@ -28,10 +24,8 @@ struct Forecast: Codable {
         let main = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .main)
         temperature = try main.decode(Float.self, forKey: .temperature)
         humidity = try main.decode(Int.self, forKey: .humidity)
-        let weather = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .weather)
-        weatherMain = try weather.decode(String.self, forKey: .main)
-        weatherDescription = try weather.decode(String.self, forKey: .weatherDescription)
-        weatherIcon = try weather.decode(String.self, forKey: .weatherDescription)
+        let weathers = try container.decode([Weather].self, forKey: .weather)
+        weather = weathers.first
     }
     
     // MARK: - Encoding

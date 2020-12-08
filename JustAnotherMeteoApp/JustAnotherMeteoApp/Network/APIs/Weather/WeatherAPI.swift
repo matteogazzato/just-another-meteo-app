@@ -22,7 +22,7 @@ enum WeatherAPI: APIConfiguration {
     var path: String {
         switch self {
         case .fiveDaysForecastFrom(let city):
-            return "forecast?q=\(city)&APPID=\(NetworkConstants.apiKey)"
+            return "forecast?q=\(city)&cnt=5&APPID=\(NetworkConstants.apiKey)"
         }
     }
             

@@ -10,7 +10,7 @@ import Alamofire
 
 struct NetworkConstants {
     static let apiKey = "46e7709dde33fbca31403406d851a356"
-    static let baseUrl = "api.openweathermap.org/data/2.5/"
+    static let baseUrl = "https://api.openweathermap.org/data/2.5/"
 }
 
 //enum HTTPHeaderField: String {
