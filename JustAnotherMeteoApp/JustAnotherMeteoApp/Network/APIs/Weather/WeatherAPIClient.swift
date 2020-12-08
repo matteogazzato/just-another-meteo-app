@@ -9,9 +9,16 @@
 import Alamofire
 import RxSwift
 
+struct WeatherAPIClientDescriptor {
+    let city: String
+    let days: Int
+}
+
 class WeatherAPIClient {
-    static func fiveDaysWeather(fromCity city: String) -> Observable<FiveDaysForecastResponse> {
-        return NetworkClient.request(WeatherAPI.fiveDaysForecastFrom(city))
+    static func forecastsWeather(fromDescriptor desc: WeatherAPIClientDescriptor ) -> Observable<ForecastsResponse> {
+        return NetworkClient.request(WeatherAPI.forecastsFrom(desc))
     }
 }
+
+
 

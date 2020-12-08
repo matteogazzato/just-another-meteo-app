@@ -10,26 +10,26 @@ import Alamofire
 
 enum WeatherAPI: APIConfiguration {
     
-    case fiveDaysForecastFrom(_ city: String)
+    case forecastsFrom(_ desc: WeatherAPIClientDescriptor)
     
     var method: HTTPMethod {
         switch self {
-        case .fiveDaysForecastFrom(_):
+        case .forecastsFrom(_):
             return .get
         }
     }
     
     var path: String {
         switch self {
-        case .fiveDaysForecastFrom(let city):
-            return "forecast?q=\(city)&cnt=5&APPID=\(NetworkConstants.apiKey)"
+        case .forecastsFrom(let desc):
+            return "forecast?q=\(desc.city)&cnt=\(desc.days)&APPID=\(NetworkConstants.apiKey)"
         }
     }
             
     func asURLRequest() throws -> URLRequest {
         var url: URL?
         switch self {
-        case .fiveDaysForecastFrom(_):
+        case .forecastsFrom(_):
             url = URL(string:  NetworkConstants.baseUrl + path)
         }
         guard let _url = url else {
@@ -41,7 +41,7 @@ enum WeatherAPI: APIConfiguration {
         urlRequest.httpMethod = method.rawValue
         
         switch self {
-        case .fiveDaysForecastFrom:
+        case .forecastsFrom:
             NSLog("No values to set")
         }
         

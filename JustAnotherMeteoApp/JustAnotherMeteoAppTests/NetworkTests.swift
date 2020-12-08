@@ -13,10 +13,11 @@ import RxSwift
 class NetworkTests: XCTestCase {
     let disposeBag = DisposeBag()
 
-    func testWeatherFiveDaysForecast() throws {
+    func testFiveDaysForecasts() throws {
         let city = "Milan"
         let responseExpectation = expectation(description: "Five days forecast weather received")
-        WeatherAPIClient.fiveDaysWeather(fromCity: city)
+        let desc = WeatherAPIClientDescriptor(city: "Milan", days: 5)
+        WeatherAPIClient.forecastsWeather(fromDescriptor: desc)
             .subscribe(onNext: { response in
                 XCTAssertEqual(response.city.name, city)
                 XCTAssertEqual(response.forecasts.count, 5)
