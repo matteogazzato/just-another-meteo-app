@@ -11,6 +11,9 @@ import Alamofire
 struct NetworkConstants {
     static let apiKey = "46e7709dde33fbca31403406d851a356"
     static let baseUrl = "https://api.openweathermap.org/data/2.5/"
+    static func iconURL(withCodeName codeName: String) -> URL? {
+        return URL(string: "https://openweathermap.org/img/wn/\(codeName)@2x.png")
+    }
 }
 
 //enum HTTPHeaderField: String {

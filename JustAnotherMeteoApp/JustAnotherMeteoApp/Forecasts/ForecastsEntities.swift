@@ -6,13 +6,15 @@
 //  Copyright © 2020 matteogazzato@gmail.com. All rights reserved.
 //
 
+import Foundation
+
 struct ForecastCellItem {
-    let iconName: String?
+    let iconUrl: URL?
     let mainLabelText: String
     let secondaryLabelText: String
     
     init(withForecast forecast: Forecast) {
-        iconName = forecast.weather?.icon
+        iconUrl =  NetworkConstants.iconURL(withCodeName: forecast.weather?.icon ?? "")
         secondaryLabelText = forecast.weather?.description ?? "-"
         mainLabelText = forecast.weather?.main ?? "-"
     }
