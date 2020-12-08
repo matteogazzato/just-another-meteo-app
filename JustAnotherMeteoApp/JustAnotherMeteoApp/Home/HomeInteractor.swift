@@ -24,9 +24,9 @@ extension HomeInteractor: HomeInteractorProtocol {
         let desc = WeatherAPIClientDescriptor(city: city, days: days)
         _ = WeatherAPIClient.forecastsWeather(fromDescriptor: desc)
             .subscribe { response in
-                // TODO: Handle response correctly
+                self.output?.onForecastsReceived(response.forecasts)
             } onError: { _ in
-                // TODO: Handle response correctly on error
+                self.output?.onError()
             }
     }
 }

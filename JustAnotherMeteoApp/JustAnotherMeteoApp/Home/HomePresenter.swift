@@ -34,8 +34,10 @@ class HomePresenter: HomeDataProvider {
 extension HomePresenter: HomeEventHandler {
     func onViewDidLoad() {
         // Add onViewDidLoad implementation
+        let forecastsVC = ForecastsWireframe().module()
+        view?.add(childViewController: forecastsVC)
     }
-    
+
     func onDismiss() {
         guard let vc = view else { return }
         wireframe.dismiss(vc)
@@ -49,4 +51,15 @@ extension HomePresenter: HomeEventHandler {
 // MARK: - HomeInteractorOutput
 extension HomePresenter: HomeInteractorOutput {
     // Add HomeInteractorOutput implementation
+    func onForecastsReceived(_ forecasts: [Forecast]) {
+        guard let vc = view as? HomeViewController,
+              let forecastsVc = vc.getChildViewController(ForecastsViewController.typeName) as? ForecastsViewController else { return }
+        
+        forecastsVc.dataProvider?.forecasts = forecasts
+        forecastsVc.updateUI()
+    }
+    
+    func onError() {
+        
+    }
 }

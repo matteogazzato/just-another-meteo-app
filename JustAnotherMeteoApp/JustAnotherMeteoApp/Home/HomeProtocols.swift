@@ -11,6 +11,7 @@ import UIKit
 
 protocol HomeViewProtocol: AnyObject {
 	func updateUI()
+    func add(childViewController vc: UIViewController)
 }
 
 protocol HomeInteractorProtocol: AnyObject {
@@ -35,6 +36,8 @@ protocol HomeDataProvider: AnyObject {
 
 protocol HomeInteractorOutput: AnyObject {
     // Add HomeInteractorOutput definition
+    func onForecastsReceived(_ forecasts: [Forecast])
+    func onError()
 }
 
 protocol HomeDelegate: AnyObject {

@@ -44,6 +44,13 @@ extension HomeViewController: HomeViewProtocol {
     func updateUI() {
         // update UI elements here
     }
+    
+    func add(childViewController vc: UIViewController) {
+        addChild(vc)
+        vc.didMove(toParent: self)
+        containerView.addSubview(vc.view)
+        vc.view.fillSuperview()
+    }
 }
 
 // MARK: - UISearchBarDelegate

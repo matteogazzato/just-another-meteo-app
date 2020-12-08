@@ -27,3 +27,11 @@ class ForecastTableViewCell: UITableViewCell {
 
     }
 }
+
+// MARK: - External Utils
+extension ForecastTableViewCell {
+    func update(withItem item: ForecastCellItem) {
+        mainLabel.text = item.mainLabelText
+        secondaryLabel.text = item.secondaryLabelText
+    }
+}
