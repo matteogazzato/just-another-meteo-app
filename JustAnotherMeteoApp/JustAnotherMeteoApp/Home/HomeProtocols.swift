@@ -15,6 +15,7 @@ protocol HomeViewProtocol: AnyObject {
 
 protocol HomeInteractorProtocol: AnyObject {
     // Add HomeInteractorProtocol definition
+    func retrieveForecasts(forCity city: String, days: Int)
 }
 
 protocol HomeWireframeProtocol: AnyObject {
@@ -25,7 +26,7 @@ protocol HomeWireframeProtocol: AnyObject {
 protocol HomeEventHandler: AnyObject {
     func onViewDidLoad()
     func onDismiss()
-    func onSearch()
+    func onSearch(withText text: String)
 }
 
 protocol HomeDataProvider: AnyObject {
@@ -42,4 +43,5 @@ protocol HomeDelegate: AnyObject {
 
 protocol HomeNetworkManagerProtocol: AnyObject {
     // Add HomeNetworkManagerProtocol definition
+    
 }

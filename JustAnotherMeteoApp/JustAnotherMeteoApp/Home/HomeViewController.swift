@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     // MARK: - Outlets
     // Place here possible IBOutlets
     @IBOutlet private weak var containerView: UIView!
+    @IBOutlet private weak var searchBar: UISearchBar!
     
     var eventHandler: HomeEventHandler?
     var dataProvider: HomeDataProvider?
@@ -31,17 +32,24 @@ class HomeViewController: UIViewController {
     // MARK: - Internal Utils
     fileprivate func setupUI() {
         // setup UI elements here
+        searchBar.delegate = self
     }
 
     // MARK: - Actions
     // Place here possible IBActions
-    @IBAction func search(_ sender: Any) {
-        eventHandler?.onSearch()
-    }
+    
 }
 
 extension HomeViewController: HomeViewProtocol {
     func updateUI() {
         // update UI elements here
+    }
+}
+
+// MARK: - UISearchBarDelegate
+extension HomeViewController: UISearchBarDelegate {    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text else { return }
+        eventHandler?.onSearch(withText: text)
     }
 }

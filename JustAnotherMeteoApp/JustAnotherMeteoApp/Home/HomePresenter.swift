@@ -41,8 +41,8 @@ extension HomePresenter: HomeEventHandler {
         wireframe.dismiss(vc)
     }
     
-    func onSearch() {
-        
+    func onSearch(withText text: String) {
+        interactor.retrieveForecasts(forCity: text, days: 5)
     }
 }
 

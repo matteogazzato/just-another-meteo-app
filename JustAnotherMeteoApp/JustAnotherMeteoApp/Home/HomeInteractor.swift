@@ -20,4 +20,13 @@ class HomeInteractor {
 
 extension HomeInteractor: HomeInteractorProtocol {
     // Add NextLaunchesInteractorProtocol implementation
+    func retrieveForecasts(forCity city: String, days: Int = 5) {
+        let desc = WeatherAPIClientDescriptor(city: city, days: days)
+        _ = WeatherAPIClient.forecastsWeather(fromDescriptor: desc)
+            .subscribe { response in
+                // TODO: Handle response correctly
+            } onError: { _ in
+                // TODO: Handle response correctly on error
+            }
+    }
 }
