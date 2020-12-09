@@ -66,7 +66,8 @@ extension HomePresenter: HomeInteractorOutput {
 // MARK: - ForecastsDelegate
 extension HomePresenter: ForecastsDelegate {
     func onDescriptorSelected(_ descriptor: ForecastDescriptor) {
-        // TOODO: Pass to details
-        
+        let forecastsDetailsVC = ForecastsDetailsWireframe().module()
+        forecastsDetailsVC.dataProvider?.forecastDetials = descriptor.forecasts
+        self.view?.push(viewController: forecastsDetailsVC)
     }
 }

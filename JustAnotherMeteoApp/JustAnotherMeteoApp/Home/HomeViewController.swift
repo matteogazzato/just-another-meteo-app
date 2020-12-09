@@ -53,6 +53,10 @@ extension HomeViewController: HomeViewProtocol {
         containerView.addSubview(vc.view)
         vc.didMove(toParent: self)
     }
+    
+    func push(viewController vc: UIViewController) {
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: - UISearchBarDelegate

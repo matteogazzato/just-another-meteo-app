@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2C18E43E2A93B8018CBA3EE8 /* Pods_JustAnotherMeteoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D423195ADFAF97F435D386DF /* Pods_JustAnotherMeteoApp.framework */; };
+		472391E025818BCD00BEA9A3 /* ForecastsDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 472391D825818BCD00BEA9A3 /* ForecastsDetails.storyboard */; };
+		472391E125818BCD00BEA9A3 /* ForecastsDetailsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391D925818BCD00BEA9A3 /* ForecastsDetailsNetworkManager.swift */; };
+		472391E225818BCD00BEA9A3 /* ForecastsDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391DA25818BCD00BEA9A3 /* ForecastsDetailsPresenter.swift */; };
+		472391E325818BCD00BEA9A3 /* ForecastsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391DB25818BCD00BEA9A3 /* ForecastsDetailsViewController.swift */; };
+		472391E425818BCD00BEA9A3 /* ForecastsDetailsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391DC25818BCD00BEA9A3 /* ForecastsDetailsProtocols.swift */; };
+		472391E525818BCD00BEA9A3 /* ForecastsDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391DD25818BCD00BEA9A3 /* ForecastsDetailsInteractor.swift */; };
+		472391E625818BCD00BEA9A3 /* ForecastsDetailsEntities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391DE25818BCD00BEA9A3 /* ForecastsDetailsEntities.swift */; };
+		472391E725818BCD00BEA9A3 /* ForecastsDetailsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391DF25818BCD00BEA9A3 /* ForecastsDetailsWireframe.swift */; };
+		472391F025818FA500BEA9A3 /* ForecastsDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472391EF25818FA500BEA9A3 /* ForecastsDetailsTableViewCell.swift */; };
 		47260568257D5AB700B4C874 /* APIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47260565257D5AB700B4C874 /* APIConfiguration.swift */; };
 		47260569257D5AB700B4C874 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47260566257D5AB700B4C874 /* NetworkConstants.swift */; };
 		4726056A257D5AB700B4C874 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47260567257D5AB700B4C874 /* NetworkClient.swift */; };
@@ -75,6 +84,15 @@
 		15B5D32AE124FEDF90C4BF72 /* Pods-JustAnotherMeteoApp-JustAnotherMeteoAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustAnotherMeteoApp-JustAnotherMeteoAppUITests.release.xcconfig"; path = "Target Support Files/Pods-JustAnotherMeteoApp-JustAnotherMeteoAppUITests/Pods-JustAnotherMeteoApp-JustAnotherMeteoAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		36D04DA7FD6C4DDA2A1EFF0F /* Pods-JustAnotherMeteoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustAnotherMeteoApp.release.xcconfig"; path = "Target Support Files/Pods-JustAnotherMeteoApp/Pods-JustAnotherMeteoApp.release.xcconfig"; sourceTree = "<group>"; };
 		3D5219952FFC6A41DC6487A7 /* Pods-JustAnotherMeteoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustAnotherMeteoApp.debug.xcconfig"; path = "Target Support Files/Pods-JustAnotherMeteoApp/Pods-JustAnotherMeteoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		472391D825818BCD00BEA9A3 /* ForecastsDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForecastsDetails.storyboard; sourceTree = "<group>"; };
+		472391D925818BCD00BEA9A3 /* ForecastsDetailsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsNetworkManager.swift; sourceTree = "<group>"; };
+		472391DA25818BCD00BEA9A3 /* ForecastsDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsPresenter.swift; sourceTree = "<group>"; };
+		472391DB25818BCD00BEA9A3 /* ForecastsDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsViewController.swift; sourceTree = "<group>"; };
+		472391DC25818BCD00BEA9A3 /* ForecastsDetailsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsProtocols.swift; sourceTree = "<group>"; };
+		472391DD25818BCD00BEA9A3 /* ForecastsDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsInteractor.swift; sourceTree = "<group>"; };
+		472391DE25818BCD00BEA9A3 /* ForecastsDetailsEntities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsEntities.swift; sourceTree = "<group>"; };
+		472391DF25818BCD00BEA9A3 /* ForecastsDetailsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsWireframe.swift; sourceTree = "<group>"; };
+		472391EF25818FA500BEA9A3 /* ForecastsDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastsDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		47260565257D5AB700B4C874 /* APIConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIConfiguration.swift; sourceTree = "<group>"; };
 		47260566257D5AB700B4C874 /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		47260567257D5AB700B4C874 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -167,6 +185,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		472391D725818BB000BEA9A3 /* ForecastsDetails */ = {
+			isa = PBXGroup;
+			children = (
+				472391EB25818F7B00BEA9A3 /* Views */,
+				472391D825818BCD00BEA9A3 /* ForecastsDetails.storyboard */,
+				472391D925818BCD00BEA9A3 /* ForecastsDetailsNetworkManager.swift */,
+				472391DA25818BCD00BEA9A3 /* ForecastsDetailsPresenter.swift */,
+				472391DB25818BCD00BEA9A3 /* ForecastsDetailsViewController.swift */,
+				472391DC25818BCD00BEA9A3 /* ForecastsDetailsProtocols.swift */,
+				472391DD25818BCD00BEA9A3 /* ForecastsDetailsInteractor.swift */,
+				472391DE25818BCD00BEA9A3 /* ForecastsDetailsEntities.swift */,
+				472391DF25818BCD00BEA9A3 /* ForecastsDetailsWireframe.swift */,
+			);
+			path = ForecastsDetails;
+			sourceTree = "<group>";
+		};
+		472391EB25818F7B00BEA9A3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				472391EF25818FA500BEA9A3 /* ForecastsDetailsTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		47260564257D5A8C00B4C874 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +271,7 @@
 		47294E7C25783B9F0003DE5F /* JustAnotherMeteoApp */ = {
 			isa = PBXGroup;
 			children = (
+				472391D725818BB000BEA9A3 /* ForecastsDetails */,
 				474AC3A2257D49D4000C6CD7 /* Home */,
 				47A23BC4257F9B7100A2B682 /* Forecasts */,
 				478F97F325800B3200CD1DBA /* Entities */,
@@ -454,6 +497,7 @@
 				478F97EF257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib in Resources */,
 				47294E8525783B9F0003DE5F /* Main.storyboard in Resources */,
 				47A23BE3257F9D5E00A2B682 /* Forecasts.storyboard in Resources */,
+				472391E025818BCD00BEA9A3 /* ForecastsDetails.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,17 +625,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				472391E325818BCD00BEA9A3 /* ForecastsDetailsViewController.swift in Sources */,
 				47A23BE7257F9D5E00A2B682 /* ForecastsProtocols.swift in Sources */,
 				47A23BE8257F9D5E00A2B682 /* ForecastsInteractor.swift in Sources */,
+				472391E425818BCD00BEA9A3 /* ForecastsDetailsProtocols.swift in Sources */,
 				47260569257D5AB700B4C874 /* NetworkConstants.swift in Sources */,
 				47294E8225783B9F0003DE5F /* ViewController.swift in Sources */,
 				474AC397257D49CF000C6CD7 /* HomeNetworkManager.swift in Sources */,
 				47294E7E25783B9F0003DE5F /* AppDelegate.swift in Sources */,
 				4726058F257ED1F400B4C874 /* Forecast.swift in Sources */,
 				47A23BE9257F9D5E00A2B682 /* ForecastsEntities.swift in Sources */,
+				472391E725818BCD00BEA9A3 /* ForecastsDetailsWireframe.swift in Sources */,
 				474AC39E257D49CF000C6CD7 /* HomeWireframe.swift in Sources */,
+				472391E525818BCD00BEA9A3 /* ForecastsDetailsInteractor.swift in Sources */,
 				47A23BE5257F9D5E00A2B682 /* ForecastsPresenter.swift in Sources */,
+				472391E125818BCD00BEA9A3 /* ForecastsDetailsNetworkManager.swift in Sources */,
 				474AC39B257D49CF000C6CD7 /* HomeInteractor.swift in Sources */,
+				472391E225818BCD00BEA9A3 /* ForecastsDetailsPresenter.swift in Sources */,
+				472391F025818FA500BEA9A3 /* ForecastsDetailsTableViewCell.swift in Sources */,
 				474AC398257D49CF000C6CD7 /* HomePresenter.swift in Sources */,
 				474AC39A257D49CF000C6CD7 /* HomeProtocols.swift in Sources */,
 				4726056A257D5AB700B4C874 /* NetworkClient.swift in Sources */,
@@ -612,6 +663,7 @@
 				478F97EA257FE93100CD1DBA /* ForecastTVHeaderFooterView.swift in Sources */,
 				47294E8025783B9F0003DE5F /* SceneDelegate.swift in Sources */,
 				474AC399257D49CF000C6CD7 /* HomeViewController.swift in Sources */,
+				472391E625818BCD00BEA9A3 /* ForecastsDetailsEntities.swift in Sources */,
 				478F97DC257FDD9D00CD1DBA /* UITableViewCellExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

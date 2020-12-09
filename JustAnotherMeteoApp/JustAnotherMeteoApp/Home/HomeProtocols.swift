@@ -12,6 +12,7 @@ import UIKit
 protocol HomeViewProtocol: AnyObject {
 	func updateUI()
     func add(childViewController vc: UIViewController)
+    func push(viewController vc: UIViewController)
 }
 
 protocol HomeInteractorProtocol: AnyObject {

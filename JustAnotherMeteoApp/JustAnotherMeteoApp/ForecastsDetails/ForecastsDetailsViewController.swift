@@ -1,33 +1,33 @@
 //
-//  ForecastsViewController.swift
+//  ForecastsDetailsViewController.swift
 //  JustAnotherMeteoApp
 //
-//  Created Matteo Gazzato on 08/12/2020.
+//  Created Matteo Gazzato on 09/12/2020.
 //  Copyright © 2020 matteogazzato@gmail.com. All rights reserved.
 //
 
 import UIKit
 
-class ForecastsViewController: UIViewController {
+class ForecastsDetailsViewController: UIViewController {
     
     // MARK: - Outlets
     // Place here possible IBOutlets
-    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-    var eventHandler: ForecastsEventHandler?
-    var dataProvider: ForecastsDataProvider?
-    
+    var eventHandler: ForecastsDetailsEventHandler?
+    var dataProvider: ForecastsDetailsDataProvider?
+
     // MARK: - UI Lifecycle
     override func viewDidLoad() {
-        super.viewDidLoad()
+		super.viewDidLoad()
         self.setupUI()
-        self.eventHandler?.onViewDidLoad()
+		self.eventHandler?.onViewDidLoad()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+
     // MARK: - Internal Utils
     fileprivate func setupUI() {
         // setup UI elements here
@@ -35,30 +35,28 @@ class ForecastsViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.separatorColor = .clear
-        
-    }
+	}
     
     // MARK: - Actions
     // Place here possible IBActions
-    
 }
 
-extension ForecastsViewController: ForecastsViewProtocol {
-    
+extension ForecastsDetailsViewController: ForecastsDetailsViewProtocol {
+	
     func updateUI() {
         // update UI elements here
-        tableView.reloadData()
+        
     }
 }
 
 // MARK: - UITableViewDelegate UITableViewDataSource
-extension ForecastsViewController: UITableViewDelegate, UITableViewDataSource {
+extension ForecastsDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataProvider?.forecasts.count ?? 0
+        return dataProvider?.forecastDetials.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -68,20 +66,15 @@ extension ForecastsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return ForecastTableViewCell.height
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.isSelected = false
-        eventHandler?.onItemSelected(atIndex: indexPath.row)
-    }
             
     // MARK: - Table View Internal Utils
     private func setupPropertyCellAt(_ indexPath: IndexPath) -> UITableViewCell {
-        guard let forecastTVC = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.identifier,
-                                                              for: indexPath) as? ForecastTableViewCell,
-              let forecast = dataProvider?.forecasts[indexPath.row] else {
+        guard let forecastTVC = tableView.dequeueReusableCell(withIdentifier: ForecastsDetailsTableViewCell.identifier,
+                                                              for: indexPath) as? ForecastsDetailsTableViewCell,
+              let forecast = dataProvider?.forecastDetials[indexPath.row] else {
             return UITableViewCell()
         }
-        let forecastCellItem = ForecastCellItem(withForecast: forecast)
+        let forecastCellItem = ForecastsDetailsCellItem(withForecast: forecast)
         forecastTVC.update(withItem: forecastCellItem)
         
         return forecastTVC
