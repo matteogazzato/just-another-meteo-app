@@ -36,7 +36,7 @@ protocol HomeDataProvider: AnyObject {
 
 protocol HomeInteractorOutput: AnyObject {
     // Add HomeInteractorOutput definition
-    func onForecastsReceived(_ forecasts: [Forecast])
+    func onForecastsReceived(_ forecasts: [ForecastDescriptor])
     func onError()
 }
 

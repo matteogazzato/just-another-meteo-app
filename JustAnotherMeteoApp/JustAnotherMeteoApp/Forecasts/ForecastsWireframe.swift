@@ -17,11 +17,11 @@ class ForecastsWireframe {
 
 extension ForecastsWireframe: ForecastsWireframeProtocol {
     
-    func module() -> ForecastsViewController {
+    func module(withDelegate delegate: ForecastsDelegate?) -> ForecastsViewController {
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "ForecastsViewController") as! ForecastsViewController
 
         let interactor = ForecastsInteractor()
-        let presenter = ForecastsPresenter(view: vc, interactor: interactor, wireframe: self)
+        let presenter = ForecastsPresenter(view: vc, interactor: interactor, wireframe: self, delegate: delegate)
         vc.eventHandler = presenter
         vc.dataProvider = presenter
 

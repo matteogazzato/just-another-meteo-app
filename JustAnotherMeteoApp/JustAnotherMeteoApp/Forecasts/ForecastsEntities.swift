@@ -11,14 +11,16 @@ import Foundation
 struct ForecastCellItem {
     let iconUrl: URL?
     let mainLabelText: String
-    let secondaryLabelText: String
     
-    init(withForecast forecast: Forecast) {
-        iconUrl =  NetworkConstants.iconURL(withCodeName: forecast.weather?.icon ?? "")
-        mainLabelText = Helpers.convert(dateString: forecast.date,
-                                        withFormat: "yyyy-MM-dd HH:mm:ss",
-                                        toFormat: "dd, EEEE") ?? ""
-        secondaryLabelText = "\(forecast.temperature)"
+    init(withForecast forecast: ForecastDescriptor) {
+        iconUrl =  NetworkConstants.iconURL(withCodeName: forecast.icon)
+        mainLabelText = forecast.day
     }
+}
+
+struct ForecastDescriptor {
+    let day: String
+    let icon: String
+    var forecasts: [Forecast] = []
 }
 

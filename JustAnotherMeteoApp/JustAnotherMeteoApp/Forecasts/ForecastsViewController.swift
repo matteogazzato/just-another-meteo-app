@@ -37,8 +37,6 @@ class ForecastsViewController: UIViewController {
         tableView.separatorColor = .clear
         tableView.tableFooterView = UIView()
         
-        tableView.register(ForecastTVHeaderFooterView.nib,
-                           forHeaderFooterViewReuseIdentifier: ForecastTVHeaderFooterView.identifier)
     }
     
     // MARK: - Actions
@@ -72,25 +70,10 @@ extension ForecastsViewController: UITableViewDelegate, UITableViewDataSource {
         return ForecastTableViewCell.height
     }
     
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        switch section {
-        case 0:
-            guard let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: ForecastTVHeaderFooterView.identifier) as? ForecastTVHeaderFooterView,
-                  let mainItem = dataProvider?.mainForecast else {
-                return nil
-            }
-            let forecastCellItem = ForecastCellItem(withForecast: mainItem)
-            header.update(withItem: forecastCellItem)
-            return header
-        default:
-            return nil
-        }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return dataProvider?.forecasts.isEmpty ?? true ? 0.0 : ForecastTVHeaderFooterView.height
-    }
-    
+        
     // MARK: - Table View Internal Utils
     private func setupPropertyCellAt(_ indexPath: IndexPath) -> UITableViewCell {
         guard let forecastTVC = tableView.dequeueReusableCell(withIdentifier: ForecastTableViewCell.identifier,

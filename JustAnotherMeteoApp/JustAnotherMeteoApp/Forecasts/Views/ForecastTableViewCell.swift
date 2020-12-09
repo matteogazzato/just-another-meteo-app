@@ -36,7 +36,6 @@ class ForecastTableViewCell: UITableViewCell {
 extension ForecastTableViewCell {
     func update(withItem item: ForecastCellItem) {
         mainLabel.text = item.mainLabelText
-        secondaryLabel.text = item.secondaryLabelText
         iconImageView.kf.setImage(with: item.iconUrl)
     }
 }

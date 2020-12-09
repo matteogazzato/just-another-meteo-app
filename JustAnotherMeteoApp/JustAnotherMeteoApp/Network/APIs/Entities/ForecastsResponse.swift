@@ -11,7 +11,7 @@ struct ForecastsResponse: Codable {
     let forecasts: [Forecast]
     
     enum CodingKeys: String, CodingKey {
-        case forecasts = "list"
+        case forecasts = "list" 
         case city = "city"
     }
     

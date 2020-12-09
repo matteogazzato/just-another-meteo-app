@@ -18,19 +18,19 @@ protocol ForecastsInteractorProtocol: AnyObject {
 }
 
 protocol ForecastsWireframeProtocol: AnyObject {
-	func module() -> ForecastsViewController
+    func module(withDelegate delegate: ForecastsDelegate?) -> ForecastsViewController
     func dismiss(_ ui: ForecastsViewProtocol)
 }
 
 protocol ForecastsEventHandler: AnyObject {
     func onViewDidLoad()
     func onDismiss()
+    func onItemSelected(atIndex index: Int)
 }
 
 protocol ForecastsDataProvider: AnyObject {
     // Add ForecastsDataProvider definition
-    var mainForecast: Forecast! { get set }
-    var forecasts: [Forecast] { get set }
+    var forecasts: [ForecastDescriptor] { get set }
 }
 
 protocol ForecastsInteractorOutput: AnyObject {
@@ -40,3 +40,8 @@ protocol ForecastsInteractorOutput: AnyObject {
 protocol ForecastsNetworkManagerProtocol: AnyObject {
     // Add ForecastsNetworkManagerProtocol definition
 }
+
+protocol ForecastsDelegate: AnyObject {
+    func onDescriptorSelected(_ descriptor: ForecastDescriptor)
+}
+

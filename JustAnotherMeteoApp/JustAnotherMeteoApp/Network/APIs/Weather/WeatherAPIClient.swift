@@ -11,7 +11,6 @@ import RxSwift
 
 struct WeatherAPIClientDescriptor {
     let city: String
-    let days: Int
 }
 
 class WeatherAPIClient {
