@@ -37,7 +37,7 @@ extension HomeInteractor {
         let forecastsDict = Dictionary(grouping: response.forecasts) {
             Helpers.convert(dateString: $0.date,
                             withFormat: "yyyy-MM-dd HH:mm:ss",
-                            toFormat: "dd, EEEE")
+                            toFormat: "dd EEEE")
             
         }
         

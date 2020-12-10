@@ -83,7 +83,6 @@ extension ForecastsViewController: UITableViewDelegate, UITableViewDataSource {
         }
         let forecastCellItem = ForecastCellItem(withForecast: forecast)
         forecastTVC.update(withItem: forecastCellItem)
-        
         return forecastTVC
     }
 }

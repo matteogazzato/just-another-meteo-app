@@ -16,8 +16,9 @@ struct ForecastsDetailsCellItem {
     init(withForecast forecast: Forecast) {
         iconUrl =  NetworkConstants.iconURL(withCodeName: forecast.weather?.icon ?? "")
         let hour = Helpers.convert(dateString: forecast.date, withFormat: "yyyy-MM-dd HH:mm:ss", toFormat: "HH:mm") ?? ""
-        let description = forecast.weather?.description ?? ""
+        let description = forecast.weather?.description.uppercased() ?? ""
         primaryLabelText = hour + " - " + description
-        secondaryLabelText = "Humidity: \(forecast.humidity) - Temperature: \(forecast.temperature)"
+        let temperature = Int(forecast.temperature)
+        secondaryLabelText = "Humidity: \(forecast.humidity) %\nTemperature: \(temperature) °C"
     }
 }

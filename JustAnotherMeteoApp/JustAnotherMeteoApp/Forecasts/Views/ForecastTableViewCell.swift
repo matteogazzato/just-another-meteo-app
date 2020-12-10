@@ -15,7 +15,6 @@ class ForecastTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
     @IBOutlet private weak var mainLabel: UILabel!
-    @IBOutlet private weak var secondaryLabel: UILabel!
     @IBOutlet private weak var iconImageView: UIImageView!
     @IBOutlet private weak var containerView: UIView!
     
