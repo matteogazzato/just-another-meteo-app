@@ -29,8 +29,6 @@
 		4726059C257F833100B4C874 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4726059B257F833100B4C874 /* Weather.swift */; };
 		47294E7E25783B9F0003DE5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294E7D25783B9F0003DE5F /* AppDelegate.swift */; };
 		47294E8025783B9F0003DE5F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294E7F25783B9F0003DE5F /* SceneDelegate.swift */; };
-		47294E8225783B9F0003DE5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294E8125783B9F0003DE5F /* ViewController.swift */; };
-		47294E8525783B9F0003DE5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47294E8325783B9F0003DE5F /* Main.storyboard */; };
 		47294E8725783BA20003DE5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47294E8625783BA20003DE5F /* Assets.xcassets */; };
 		47294E8A25783BA20003DE5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47294E8825783BA20003DE5F /* LaunchScreen.storyboard */; };
 		47294E9525783BA20003DE5F /* JustAnotherMeteoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47294E9425783BA20003DE5F /* JustAnotherMeteoAppTests.swift */; };
@@ -106,8 +104,6 @@
 		47294E7A25783B9F0003DE5F /* JustAnotherMeteoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustAnotherMeteoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47294E7D25783B9F0003DE5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47294E7F25783B9F0003DE5F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		47294E8125783B9F0003DE5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		47294E8425783B9F0003DE5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47294E8625783BA20003DE5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47294E8925783BA20003DE5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47294E8B25783BA20003DE5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -250,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				47294E7C25783B9F0003DE5F /* JustAnotherMeteoApp */,
+				478F97D0257FD50700CD1DBA /* Extensions */,
 				47294E9325783BA20003DE5F /* JustAnotherMeteoAppTests */,
 				47294E9E25783BA20003DE5F /* JustAnotherMeteoAppUITests */,
 				47294E7B25783B9F0003DE5F /* Products */,
@@ -271,16 +268,13 @@
 		47294E7C25783B9F0003DE5F /* JustAnotherMeteoApp */ = {
 			isa = PBXGroup;
 			children = (
-				472391D725818BB000BEA9A3 /* ForecastsDetails */,
 				474AC3A2257D49D4000C6CD7 /* Home */,
 				47A23BC4257F9B7100A2B682 /* Forecasts */,
+				472391D725818BB000BEA9A3 /* ForecastsDetails */,
 				478F97F325800B3200CD1DBA /* Entities */,
-				478F97D0257FD50700CD1DBA /* Extensions */,
 				47260564257D5A8C00B4C874 /* Network */,
 				47294E7D25783B9F0003DE5F /* AppDelegate.swift */,
 				47294E7F25783B9F0003DE5F /* SceneDelegate.swift */,
-				47294E8125783B9F0003DE5F /* ViewController.swift */,
-				47294E8325783B9F0003DE5F /* Main.storyboard */,
 				47294E8625783BA20003DE5F /* Assets.xcassets */,
 				47294E8825783BA20003DE5F /* LaunchScreen.storyboard */,
 				47294E8B25783BA20003DE5F /* Info.plist */,
@@ -495,7 +489,6 @@
 				47294E8725783BA20003DE5F /* Assets.xcassets in Resources */,
 				474AC39D257D49CF000C6CD7 /* Home.xib in Resources */,
 				478F97EF257FEA9F00CD1DBA /* ForecastTVHeaderFooterView.xib in Resources */,
-				47294E8525783B9F0003DE5F /* Main.storyboard in Resources */,
 				47A23BE3257F9D5E00A2B682 /* Forecasts.storyboard in Resources */,
 				472391E025818BCD00BEA9A3 /* ForecastsDetails.storyboard in Resources */,
 			);
@@ -630,7 +623,6 @@
 				47A23BE8257F9D5E00A2B682 /* ForecastsInteractor.swift in Sources */,
 				472391E425818BCD00BEA9A3 /* ForecastsDetailsProtocols.swift in Sources */,
 				47260569257D5AB700B4C874 /* NetworkConstants.swift in Sources */,
-				47294E8225783B9F0003DE5F /* ViewController.swift in Sources */,
 				474AC397257D49CF000C6CD7 /* HomeNetworkManager.swift in Sources */,
 				47294E7E25783B9F0003DE5F /* AppDelegate.swift in Sources */,
 				4726058F257ED1F400B4C874 /* Forecast.swift in Sources */,
@@ -701,14 +693,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		47294E8325783B9F0003DE5F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				47294E8425783B9F0003DE5F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		47294E8825783BA20003DE5F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
