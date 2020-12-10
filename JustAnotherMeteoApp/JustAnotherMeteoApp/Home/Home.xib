@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="JustAnotherMeteoApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ccF-jF-Prm" id="cv1-qX-Z6B"/>
                 <outlet property="containerView" destination="Elq-mu-lKl" id="996-Qh-kYR"/>
                 <outlet property="searchBar" destination="HnP-NK-QnD" id="bhH-s3-G8T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -30,7 +31,16 @@
                 </searchBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-mu-lKl">
                     <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-jF-Prm">
+                            <rect key="frame" x="188.5" y="362.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ccF-jF-Prm" firstAttribute="centerY" secondItem="Elq-mu-lKl" secondAttribute="centerY" id="13A-26-B2a"/>
+                        <constraint firstItem="ccF-jF-Prm" firstAttribute="centerX" secondItem="Elq-mu-lKl" secondAttribute="centerX" id="1aE-zX-XzE"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="JzQ-gq-ci7"/>

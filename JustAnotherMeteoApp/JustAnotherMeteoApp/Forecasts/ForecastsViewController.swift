@@ -35,7 +35,7 @@ class ForecastsViewController: UIViewController {
         tableView.dataSource = self
         tableView.tableFooterView = UIView()
         tableView.separatorColor = .clear
-        
+        self.view.isHidden = true
     }
     
     // MARK: - Actions
@@ -48,6 +48,7 @@ extension ForecastsViewController: ForecastsViewProtocol {
     func updateUI() {
         // update UI elements here
         tableView.reloadData()
+        self.view.isHidden = dataProvider?.forecasts.isEmpty ?? true ? true : false
     }
 }
 

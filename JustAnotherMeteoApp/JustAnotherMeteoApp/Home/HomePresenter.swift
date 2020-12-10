@@ -44,6 +44,10 @@ extension HomePresenter: HomeEventHandler {
     }
     
     func onSearch(withText text: String) {
+        guard let vc = view as? HomeViewController,
+              let forecastsVc = vc.getChildViewController(ForecastsViewController.typeName) as? ForecastsViewController else { return }
+        forecastsVc.dataProvider?.forecasts = []
+        forecastsVc.updateUI()
         interactor.retrieveForecasts(forCity: text, days: 5)
     }
 }
@@ -59,7 +63,7 @@ extension HomePresenter: HomeInteractorOutput {
     }
     
     func onError() {
-        
+        view?.dataLoaded(false)
     }
 }
 
