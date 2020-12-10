@@ -16,11 +16,11 @@ class NetworkTests: XCTestCase {
     func testFiveDaysForecasts() throws {
         let city = "Milan"
         let responseExpectation = expectation(description: "Five days forecast weather received")
-        let desc = WeatherAPIClientDescriptor(city: "Milan", days: 5)
+        let desc = WeatherAPIClientDescriptor(city: "Milan")
         WeatherAPIClient.forecastsWeather(fromDescriptor: desc)
             .subscribe(onNext: { response in
                 XCTAssertEqual(response.city.name, city)
-                XCTAssertEqual(response.forecasts.count, 5)
+                XCTAssertEqual(response.forecasts.count, 40)
                 responseExpectation.fulfill()
             }, onError: { error in
                 XCTFail()
