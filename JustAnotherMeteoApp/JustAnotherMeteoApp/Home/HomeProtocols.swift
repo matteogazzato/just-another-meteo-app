@@ -11,10 +11,14 @@ import UIKit
 
 protocol HomeViewProtocol: AnyObject {
 	func updateUI()
+    func add(childViewController vc: UIViewController)
+    func push(viewController vc: UIViewController)
+    func dataLoaded(_ loaded: Bool)
 }
 
 protocol HomeInteractorProtocol: AnyObject {
     // Add HomeInteractorProtocol definition
+    func retrieveForecasts(forCity city: String, days: Int)
 }
 
 protocol HomeWireframeProtocol: AnyObject {
@@ -25,7 +29,7 @@ protocol HomeWireframeProtocol: AnyObject {
 protocol HomeEventHandler: AnyObject {
     func onViewDidLoad()
     func onDismiss()
-    func onSearch()
+    func onSearch(withText text: String)
 }
 
 protocol HomeDataProvider: AnyObject {
@@ -34,6 +38,8 @@ protocol HomeDataProvider: AnyObject {
 
 protocol HomeInteractorOutput: AnyObject {
     // Add HomeInteractorOutput definition
+    func onForecastsReceived(_ forecasts: [ForecastDescriptor])
+    func onError()
 }
 
 protocol HomeDelegate: AnyObject {
@@ -42,4 +48,5 @@ protocol HomeDelegate: AnyObject {
 
 protocol HomeNetworkManagerProtocol: AnyObject {
     // Add HomeNetworkManagerProtocol definition
+    
 }

@@ -10,12 +10,14 @@ struct Forecast: Codable {
     let temperature: Float
     let humidity: Int
     let weather: Weather?
+    let date: String
     
     enum CodingKeys: String, CodingKey {
         case main = "main"
         case temperature = "temp"
         case humidity = "humidity"
         case weather = "weather"
+        case date = "dt_txt"
     }
     
     // MARK: - Decoding
@@ -24,6 +26,7 @@ struct Forecast: Codable {
         let main = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .main)
         temperature = try main.decode(Float.self, forKey: .temperature)
         humidity = try main.decode(Int.self, forKey: .humidity)
+        date = try container.decode(String.self, forKey: .date)
         let weathers = try container.decode([Weather].self, forKey: .weather)
         weather = weathers.first
     }

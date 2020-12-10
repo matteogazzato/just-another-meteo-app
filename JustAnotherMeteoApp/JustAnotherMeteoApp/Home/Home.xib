@@ -10,7 +10,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="JustAnotherMeteoApp" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="ccF-jF-Prm" id="cv1-qX-Z6B"/>
                 <outlet property="containerView" destination="Elq-mu-lKl" id="996-Qh-kYR"/>
+                <outlet property="searchBar" destination="HnP-NK-QnD" id="bhH-s3-G8T"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,33 +21,38 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-LP-9dF">
-                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                    <items>
-                        <navigationItem id="aiS-az-YVY">
-                            <barButtonItem key="rightBarButtonItem" systemItem="search" id="MZE-nL-SI8">
-                                <connections>
-                                    <action selector="search:" destination="-1" id="kIg-ke-P88"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
+                <searchBar contentMode="redraw" placeholder="Enter the town/city name" translatesAutoresizingMaskIntoConstraints="NO" id="HnP-NK-QnD">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <scopeButtonTitles>
+                        <string>Title</string>
+                        <string>Title</string>
+                    </scopeButtonTitles>
+                </searchBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Elq-mu-lKl">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                    <subviews>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ccF-jF-Prm">
+                            <rect key="frame" x="188.5" y="362.5" width="37" height="37"/>
+                        </activityIndicatorView>
+                    </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="ccF-jF-Prm" firstAttribute="centerY" secondItem="Elq-mu-lKl" secondAttribute="centerY" id="13A-26-B2a"/>
+                        <constraint firstItem="ccF-jF-Prm" firstAttribute="centerX" secondItem="Elq-mu-lKl" secondAttribute="centerX" id="1aE-zX-XzE"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="JzQ-gq-ci7"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Elq-mu-lKl" secondAttribute="bottom" constant="34" id="KGW-Xc-fT7"/>
-                <constraint firstItem="Elq-mu-lKl" firstAttribute="top" secondItem="FH4-LP-9dF" secondAttribute="bottom" id="PCU-yE-edx"/>
-                <constraint firstItem="FH4-LP-9dF" firstAttribute="top" secondItem="JzQ-gq-ci7" secondAttribute="top" id="Uae-DN-IfO"/>
-                <constraint firstItem="Elq-mu-lKl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="cPp-Ur-oAR"/>
-                <constraint firstAttribute="trailing" secondItem="FH4-LP-9dF" secondAttribute="trailing" id="hi6-bE-xkH"/>
-                <constraint firstItem="FH4-LP-9dF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="s3o-69-Vrb"/>
-                <constraint firstAttribute="trailing" secondItem="Elq-mu-lKl" secondAttribute="trailing" id="uOR-iF-UhM"/>
+                <constraint firstItem="HnP-NK-QnD" firstAttribute="leading" secondItem="JzQ-gq-ci7" secondAttribute="leading" id="1jh-fu-bSB"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="leading" secondItem="JzQ-gq-ci7" secondAttribute="leading" id="5gE-n6-RmL"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="bottom" secondItem="JzQ-gq-ci7" secondAttribute="bottom" id="8ig-mJ-hZX"/>
+                <constraint firstItem="JzQ-gq-ci7" firstAttribute="top" secondItem="HnP-NK-QnD" secondAttribute="top" id="91D-Ic-70i"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="top" secondItem="HnP-NK-QnD" secondAttribute="bottom" id="Ovg-Jb-jdb"/>
+                <constraint firstItem="Elq-mu-lKl" firstAttribute="trailing" secondItem="JzQ-gq-ci7" secondAttribute="trailing" id="mpT-VW-lT5"/>
+                <constraint firstItem="HnP-NK-QnD" firstAttribute="trailing" secondItem="JzQ-gq-ci7" secondAttribute="trailing" id="nCE-Fm-tOa"/>
             </constraints>
             <point key="canvasLocation" x="137.68115942028987" y="153.34821428571428"/>
         </view>
